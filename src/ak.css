@@ -1,0 +1,17 @@
+*
+{
+    margin:0 auto;
+    padding :0;
+}
+h1
+{
+    color:rgb(242, 255, 0);
+    background-color: blue;
+}
+div
+{
+    width:600px;
+    height:400px;
+    background-color: rgb(224, 127, 9);
+border-radius: 10px;
+}
