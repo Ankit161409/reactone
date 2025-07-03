@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Xyz ,{Aboutpage1,Aboutpage2} from './Ak';
-
+import './ak.css';          //import style in index js
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
    <Xyz></Xyz>
    <Aboutpage2/>
-   <Aboutpage1/>
+   {/* <Aboutpage1/> */}
    
    
   </React.StrictMode>

@@ -1,18 +1,37 @@
-import './ak.css';
+// import './ak.css';       style import in module
+
+import { Fragment } from "react/jsx-runtime";
 
 export default function Aboutpage()
 {
-   return  <h1>this is from default aboutpage function</h1>
+   return  <h1 className='h11'>this is from default aboutpage function</h1>
 }
 export function Aboutpage1()
 {
    return( 
-   <div> <h1 class="h1">this is from aboutpage1 name  function</h1></div>
+   <div className='div'> <h1 className="divh1">this is from aboutpage1 name  function</h1></div>
 );
 }
 export function Aboutpage2()
 {
-   return   <h1>this is from aboutpage2 name  function</h1>
+   const name ="ankit";
+   const age =50;
+   let sub ="java";
+   let working  ="true";
+   return(
+      <Fragment>
+       <div className='div'> 
+      <h1 className='h12'>this is from aboutpage2 ankit function</h1></div>
+      <h2 className='h12'>this is from aboutpage2 name  function</h2>
+      <h1>{name}</h1>
+      <h1>{age*10}</h1>
+      <h1>{sub}</h1>
+      <h1>{working}</h1>
+      <h1>{<Aboutpage1/> }</h1>
+      {/* <h1>{ name=="ankit" ? "yes" : "no" }</h1> */}
+      <h1>{<span>this is my element</span>}</h1>
+</Fragment>
+   )
 }
   
 
