@@ -27,7 +27,7 @@ export function Aboutpage2()
       <h1>{age*10}</h1>
       <h1>{sub}</h1>
       <h1>{working}</h1>
-      <h1>{<Aboutpage1/> }</h1>
+      <h1>{<Aboutpage1/> }</h1>  
       <h1>{ name==="ankit" ? "yes" : "no" }</h1>
       <h1>{<span>this is my element</span>}</h1>
       <h1 style={{color:'red',backgroundColor:'green'}}>this is inline css </h1>

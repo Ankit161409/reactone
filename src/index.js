@@ -2,14 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Xyz ,{Aboutpage1,Aboutpage2} from './Ak';
 import './ak.css';          //import style in index js
-
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
+import Bootstrap from './mybootstrap';
+import {Hookspage} from './hookspage';
+ 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+   <Hookspage/>
+
    <Xyz></Xyz>
    <Aboutpage2/>
-   {/* <Aboutpage1/> */}
-   
+   <Aboutpage1/>
+   <Bootstrap/>
    
   </React.StrictMode>
 );
