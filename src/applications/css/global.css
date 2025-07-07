@@ -1,0 +1,25 @@
+*{
+    margin:0 auto;
+    padding: 0;
+
+}
+.myapp
+{
+    height: 100px;
+    width:100px;
+    border-top-right-radius:20px;
+    border-bottom-left-radius:20px;
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 20px;
+    background-color: rgb(241, 241, 245);
+    /* border:transparent; */
+  
+    /* color: bisque; */
+}
+.myapp:hover
+{
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px rgb(193, 25, 249);
+    transition: 0.1s ease;
+}
