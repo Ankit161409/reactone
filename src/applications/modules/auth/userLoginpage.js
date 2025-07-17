@@ -1,8 +1,47 @@
  
 
 import React from 'react';
-import {Link} from "react-router-dom"
+import { Link, useNavigate } from 'react-router-dom'
+import {ToastContainer,toast} from 'react-toastify'
+import {useState} from 'react'
+
+
+ 
 function UserLoginpage() {
+
+
+  const nav=useNavigate();
+
+  const [mail,updmail]=useState('ankit@gmail.com');
+  const [pass,updpass]=useState('ankit1234');
+
+  const updatemail=(m)=>
+  {
+    updmail(m.target.value)
+  }
+const updatepass=(p)=>
+  {
+    updpass(p.target.value)
+  }
+
+  const validationlogin=()=>
+  {
+if(mail==="" || pass==="")
+{
+  toast.warning("your email or password is blank",{position:"top-left",theme:"dark",autoClose:2000})
+}
+else
+{
+  toast.success("congrats login success",{position:"top-left",theme:"dark",autoClose:2000})
+  setTimeout(()=>
+  {
+    nav("/dashboard");
+  },2000)
+}
+
+
+  }
+
   return (
     // Main container with Bootstrap padding and margin utilities
     <div className="container mt-5">
@@ -14,6 +53,7 @@ function UserLoginpage() {
         <div className="col-md-6 col-lg-4 shadow p-4 rounded bg-white">
           
           {/* Title */}
+          <ToastContainer/>
           <h2 className="text-center mb-4 text-primary">User Login</h2>
           
           {/* Login Form */}
@@ -22,18 +62,18 @@ function UserLoginpage() {
             {/* Email input field */}
             <div className="mb-3">
               <label htmlFor="email" className="form-label">Email address</label>
-              <input type="email" className="form-control" id="email" placeholder="Enter your email" />
+              <input type="email" className="form-control" id="email" placeholder="Enter your email"  value={mail} onInput={updatemail}/>
             </div>
             
             {/* Password input field */}
             <div className="mb-3">
               <label htmlFor="password" className="form-label">Password</label>
-              <input type="password" className="form-control" id="password" placeholder="Enter your password" />
+              <input type="password" className="form-control" id="password" placeholder="Enter your password" value={pass} onInput={updatepass}/>
             </div>
             
             {/* Submit button */}
-            <button type="submit" className="btn btn-primary w-100">Login</button>
-           <span className="if">if you already not register then please </span> 
+            <input type="button" className="btn btn-primary w-100" value="login" onClick={validationlogin}/> 
+           <span className="if"> if you already not register then please </span> 
 <Link to="/Register" className="reg">Register</Link>
           </form>
         </div>

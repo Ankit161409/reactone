@@ -77,7 +77,7 @@ function UserRegisterPage() {
             </div>
 
             {/* Submit Button */}
-            <input type="submit" className="btn btn-success w-100" value="Register"/> 
+          <Link to="/login" className="ml-2">  <input type="submit" className="btn btn-success w-100" value="Register"/> </Link> 
             <span className='ml-5 m-3'>if you have already register then please </span> 
 <Link to="/login" className="ml-2">Login</Link>
           
