@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import React  from 'react'
 import axios from 'axios';
  
+ 
+ import { Link } from 'react-router-dom';
 function DetailsPage() {
 
 const {id}=useParams();
@@ -33,6 +35,7 @@ useEffect(()=>
        <p className='h6'> {data.returnPolicy}</p>
        <p className='h3'> {data.warrantyInformation}</p>
        <p className='h3'>stocks : {data.stock<=50? <span className='  stock'>{data.stock}</span>: data.stock}</p>
+                    <Link to="/dashboard/employeelist" className='btn btn-success'>Back</Link>
    
        
         

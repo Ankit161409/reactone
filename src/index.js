@@ -14,6 +14,7 @@ import Errorpage from './applications/shares/errorpage.js';
 import DetailsPage from './applications/modules/dashboard/DetailsPage.js';
 import LandingPage from './applications/modules/dashboard/LandingPage.js';
 import Reacharts from './applications/modules/dashboard/Reacharts.js';
+import Mainbranch from './applications/modules/dashboard/props/Mainbranch.js';
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -34,6 +35,7 @@ root.render(
             <Route path='employeelist/detailsPage/:id' element={<DetailsPage/>}> </Route>
             <Route path='landing' element={<LandingPage/>}> </Route>
             <Route path='chart' element={<Reacharts/> }> </Route>
+            <Route path='props' element={<Mainbranch/> }> </Route>
           
           {/* <Route path=' ' element={<Homepage/>}> </Route> */}
 
