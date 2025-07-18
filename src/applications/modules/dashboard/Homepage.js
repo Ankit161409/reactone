@@ -6,27 +6,37 @@ function Homepage() {
   return (
     <Fragment>
     <div className='container-fluid p-5'>
-      localdata length is : {localdata?.length}         {/*// ✅ Safe: Returns undefined */}
+      localdata length is : {localdata?.length}  
+   <p className='mt-4'> Products details </p>        {/*// ✅ Safe: Returns undefined */}
 <div className='row '>
 <div className='col-md-12 bg-info mt-5'>
-      <table border="2"  cellPadding="5"  > 
-         <thead className='fs-1' >
+      <table border="2"  className='table' > 
+         <thead >
         <tr>
           <th>
-            products id
+         Id
           </th>
           <th>
-            products title
+          title
           </th>
           <th>
-            products price
+          price
           </th>
             <th>
-            products stock
+            stock
+          </th>
+             <th>
+            category
+          </th>
+           <th>
+            warranty
+          </th>
+           <th>
+          return Policy
           </th>
         </tr>
         </thead>
-        <tbody className='fs-1' >
+        <tbody  >
         {localdata.map((n) => {
           return(
           <tr key={n.id}>
@@ -34,6 +44,9 @@ function Homepage() {
             <td>{n.title} </td>
             <td>{n.price} </td>
             <td>{n.stock} </td>
+            <td>{n.category} </td>
+            <td>{n.warrantyInformation} </td>
+            <td>{n.returnPolicy} </td>
 
           </tr>);
         })}
