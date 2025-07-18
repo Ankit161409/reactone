@@ -21,7 +21,7 @@ export function Welcomeapp()
  {MyappList.map((app)=>{
 return(
  
- <div className="col-md-2  text-center">
+ <div className="col-md-2  text-center" key={app.url}>
             <Link to={app.url} className="border myapp  text-dark mt-3" >
            {app.icons}
             <p>{app.appname}</p>
@@ -29,7 +29,7 @@ return(
 
 
         </div>
-)
+);
  }
 
 )}
