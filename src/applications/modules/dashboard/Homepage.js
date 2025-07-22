@@ -6,8 +6,8 @@ function Homepage() {
   return (
     <Fragment>
     <div className='container-fluid p-5'>
-      localdata length is : {localdata?.length}  
-   <p className='mt-4'> Products details </p>        {/*// ✅ Safe: Returns undefined */}
+      localdata length is : {localdata?.length || 0}          {/*// ✅ Safe: Returns undefined */}
+   <p className='mt-4'> Products details </p>
 <div className='row '>
 <div className='col-md-12 bg-info mt-5'>
       <table border="2"  className='table' > 
