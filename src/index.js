@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{lazy,Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
@@ -16,6 +16,7 @@ import LandingPage from './applications/modules/dashboard/LandingPage.js';
 import Reacharts from './applications/modules/dashboard/Reacharts.js';
 import Mainbranch from './applications/modules/dashboard/props/Mainbranch.js';
  
+ const Lazypage=lazy(()=>import("./applications/modules/dashboard/Lazypage.js"));  // when using suspence import this type
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -36,6 +37,7 @@ root.render(
             <Route path='landing' element={<LandingPage/>}> </Route>
             <Route path='chart' element={<Reacharts/> }> </Route>
             <Route path='props' element={<Mainbranch/> }> </Route>
+            <Route path='lazypage' element={<Suspense fallback={<p className='fallbackMsg'>please wait page is loading......</p>}><Lazypage/> </Suspense>}> </Route>
           
           {/* <Route path=' ' element={<Homepage/>}> </Route> */}
 

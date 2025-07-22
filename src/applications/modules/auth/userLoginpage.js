@@ -7,26 +7,106 @@ import {useState} from 'react'
 
 
  
+// function UserLoginpage() {
+
+
+//   const nav=useNavigate();
+
+//   const [mail,updmail]=useState('ankit@gmail.com');
+//   const [pass,updpass]=useState('ankit1234');
+
+//   const updatemail=(m)=>
+//   {
+//     updmail(m.target.value)
+//   }
+// const updatepass=(p)=>
+//   {
+//     updpass(p.target.value)
+//   }
+
+//   const validationlogin=()=>
+//   {
+// if(mail==="" || pass==="")
+// {
+//   toast.warning("your email or password is blank",{position:"top-left",theme:"dark",autoClose:2000})
+// }
+// else
+// {
+//   toast.success("congrats login success",{position:"top-left",theme:"dark",autoClose:2000})
+//   setTimeout(()=>
+//   {
+//     nav("/dashboard");
+//   },2000)
+// }
+
+
+//   }
+
+//   return (
+//     // Main container with Bootstrap padding and margin utilities
+//     <div className="container mt-5">
+      
+//       {/* Centering the row */}
+//       <div className="row justify-content-center">
+        
+//         {/* Column with shadow, padding, rounded corners and a white background */}
+//         <div className="col-md-6 col-lg-4 shadow p-4 rounded bg-white">
+          
+//           {/* Title */}
+//           <ToastContainer/>
+//           <h2 className="text-center mb-4 text-primary">User Login</h2>
+          
+//           {/* Login Form */}
+//           <form>
+            
+//             {/* Email input field */}
+//             <div className="mb-3">
+//               <label htmlFor="email" className="form-label">Email address</label>
+//               <input type="email" className="form-control" id="email" placeholder="Enter your email"  value={mail} onInput={updatemail}/>
+//             </div>
+            
+//             {/* Password input field */}
+//             <div className="mb-3">
+//               <label htmlFor="password" className="form-label">Password</label>
+//               <input type="password" className="form-control" id="password" placeholder="Enter your password" value={pass} onInput={updatepass}/>
+//             </div>
+            
+//             {/* Submit button */}
+//             <input type="button" className="btn btn-primary w-100" value="login" onClick={validationlogin}/> 
+//            <span className="if"> if you already not register then please </span> 
+// <Link to="/Register" className="reg">Register</Link>
+//           </form>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default UserLoginpage;
+
 function UserLoginpage() {
 
 
   const nav=useNavigate();
 
-  const [mail,updmail]=useState('ankit@gmail.com');
-  const [pass,updpass]=useState('ankit1234');
+   const[login,loginupdate]=useState({
+    email:"abcd",
+    pass:"abcd"
+   });
 
-  const updatemail=(m)=>
-  {
-    updmail(m.target.value)
+const updatefield=(e)=>
+{
+const {name,value}=e.target;
+loginupdate((a)=>{
+  return {
+    ...a,
+    [name]:value
   }
-const updatepass=(p)=>
-  {
-    updpass(p.target.value)
-  }
-
+})
+}
   const validationlogin=()=>
   {
-if(mail==="" || pass==="")
+if(login.email==="" || login.pass==="")
 {
   toast.warning("your email or password is blank",{position:"top-left",theme:"dark",autoClose:2000})
 }
@@ -38,13 +118,10 @@ else
     nav("/dashboard");
   },2000)
 }
-
-
   }
-
   return (
     // Main container with Bootstrap padding and margin utilities
-    <div className="container mt-5">
+    <div className="container  login">
       
       {/* Centering the row */}
       <div className="row justify-content-center">
@@ -62,17 +139,17 @@ else
             {/* Email input field */}
             <div className="mb-3">
               <label htmlFor="email" className="form-label">Email address</label>
-              <input type="email" className="form-control" id="email" placeholder="Enter your email"  value={mail} onInput={updatemail}/>
+              <input type="email" className="form-control" name='email' value={login.email} onInput= {updatefield}/>
             </div>
             
             {/* Password input field */}
             <div className="mb-3">
               <label htmlFor="password" className="form-label">Password</label>
-              <input type="password" className="form-control" id="password" placeholder="Enter your password" value={pass} onInput={updatepass}/>
+              <input type="password" className="form-control" name='pass' value={login.pass} onInput={ updatefield}  />
             </div>
             
             {/* Submit button */}
-            <input type="button" className="btn btn-primary w-100" value="login" onClick={validationlogin}/> 
+            <input type="button" className="btn btn-primary w-100" value="login" onClick={validationlogin} /> 
            <span className="if"> if you already not register then please </span> 
 <Link to="/Register" className="reg">Register</Link>
           </form>
@@ -83,7 +160,6 @@ else
 }
 
 export default UserLoginpage;
-
 
 /*{
 

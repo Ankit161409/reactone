@@ -31,7 +31,7 @@ useEffect(()=>
        <p className='h2'> {data.title}</p>
        <p className='h4'> {data.description}</p>
        <p className='h1'> {data.availabilityStatus}</p>
-       <p className='h2'> {data.price}</p>
+       <p className='h2'> Price : <span className='text-secondary'><del>{data.price}</del></span><span className='text-success'>{data.price*90/100}</span>  </p>
        <p className='h6'> {data.returnPolicy}</p>
        <p className='h3'> {data.warrantyInformation}</p>
        <p className='h3'>stocks : {data.stock<=50? <span className='  stock'>{data.stock}</span>: data.stock}</p>

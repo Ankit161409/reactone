@@ -183,3 +183,19 @@
 {
   font-size: 20px;
 }
+.lazy
+{
+   font-family: "Lavishly Yours", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+.fallbackMsg
+{
+  padding:100px;
+  background-color: aqua;
+
+}
+.login
+{
+  margin-top: 150px;
+}
