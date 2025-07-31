@@ -87,6 +87,18 @@ import {useState} from 'react'
 function UserLoginpage() {
 
 
+   const [data, setData] = useState([]);
+
+  const myapi = () => {
+    axios.get('https://dummyjson.com/products').then((d) => {
+      setData(d.data.products);
+      localStorage.setItem("apidata",JSON.stringify(d.data.products));
+    });
+  };
+  useEffect(() => {
+    myapi();
+  }, []);
+
   const nav=useNavigate();
 
    const[login,loginupdate]=useState({

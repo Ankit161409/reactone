@@ -2,17 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
 function EmployeeList() {
-  const [data, setData] = useState([]);
-
-  const myapi = () => {
-    axios.get('https://dummyjson.com/products').then((d) => {
-      setData(d.data.products);
-      localStorage.setItem("apidata",JSON.stringify(d.data.products));
-    });
-  };
-  useEffect(() => {
-    myapi();
-  }, []);
+ 
   return (
     <div className="container-fluid cont">
       {/* <input type="button" value="Get Data" className="btn btn-success mb-3" onClick={myapi} /> */}
