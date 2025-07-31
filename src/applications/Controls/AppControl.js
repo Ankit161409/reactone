@@ -11,6 +11,7 @@ import {
   FaGitAlt,
   FaGithub,
   FaUnlock,
+  FaDocker
 //   FaRegistered,
 //   FaBook,
 } from "react-icons/fa";
@@ -30,10 +31,10 @@ import {
 import { FcManager } from "react-icons/fc";
 
 export const MyappList = [
-  { icons: <FaUnlock color="#e34c26" />, url: "login", appname: "User login"},
+  { icons: <FaUnlock color="#e34c26" />, url: "login", appname: "User login" },
   { icons: <FcManager color="#e34c26" />, url: "register", appname: "User register" },
   { icons: <FaHtml5 color="#e34c26" />, url: "html", appname: "HTML" },
-  { icons: <FaCss3Alt color="#264de4" />, url: "css", appname: "CSS" },
+  { icons: <FaCss3Alt color="#264de4" />, url: "css", appname: "Css " },
   { icons: <FaJs color="#f7df1e" />, url: "javascript", appname: "JavaScript" },
   { icons: <FaJava color="#007396" />, url: "java", appname: "Java" },
   { icons: <SiCplusplus color="#00599C" />, url: "cpp", appname: "C++" },
@@ -53,4 +54,38 @@ export const MyappList = [
   { icons: <SiJquery color="#0769ad" />, url: "jquery", appname: "JQuery" },
   { icons: <FaGitAlt color="#f1502f" />, url: "git", appname: "Git" },
   { icons: <FaGithub />, url: "github", appname: "GitHub" },
+  { icons: <FaDocker color="#2496ed" />, url: "docker", appname: "Docker" }, // ✅ New item added here
+];
+
+export const images=[
+  {
+    "id": 1,
+    "url": " /ak.jpg",
+    "alt": "A anime pic"
+  },
+  {
+    "id": 2,
+    "url": " /ak1.jpg",
+    "alt": "A anime pic"
+  },
+  {
+    "id": 3,
+    "url": " /ak2.jpg",
+    "alt": "A anime pic"
+  },
+  {
+    "id": 4,
+    "url": " /ak3.jpg",
+    "alt": "A spiderman logo"
+  },
+  {
+    "id": 5,
+    "url": " /ak4.jpg",
+    "alt": "deadpool image"
+  },
+  {
+    "id": 6,
+    "url": " /ak5.jpg",
+    "alt": "spideman"
+  }
 ];

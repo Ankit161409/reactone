@@ -1,0 +1,59 @@
+{
+  "akjson": [
+    {
+      "id": "1",
+      "title": "owner of this json"
+    },
+    {
+      "id": "3a4d",
+      "email": "ankit@gmail.com",
+      "pass": "reere",
+      "dob": "2025-07-03",
+      "phone": "da",
+      "gender": "Male"
+    },
+    {
+      "id": "6fcd",
+      "email": "abc@gmail.com",
+      "pass": "abcd243",
+      "dob": "2025-07-15",
+      "phone": "9999999",
+      "gender": "Male"
+    },
+    {
+      "id": "0bce",
+      "email": "ankit@gmail.com",
+      "pass": "reere",
+      "dob": "",
+      "phone": "eqe",
+      "gender": "Male"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

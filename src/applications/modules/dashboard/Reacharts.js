@@ -43,7 +43,7 @@ function Reacharts() {
       <div className='container-fluid '>
         <div className='row  '>
           <div className='col-md-12 ' >
-            <select className='form-select' onChange={selectfilter} >
+            <select className='form-select mt-3' onChange={selectfilter} >
        
               {a.map((d) => {
                 return <option key={d}>{d}</option>
@@ -54,7 +54,7 @@ function Reacharts() {
           </div>
         </div></div>
 
-      <div className='container-fluid     graphs  '>
+      <div className='container-fluid  graphs '>
         <div className='row mb-3'>
           <div className='col-md-12 ' style={{ height: "600px", width: "1000px" }}>
             <ResponsiveContainer className='graphs' width="100%" height="90%">

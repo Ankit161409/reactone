@@ -178,6 +178,7 @@
 .welcome
 {
   height: 100%;
+
 }
 .table
 {
@@ -199,3 +200,27 @@
 {
   margin-top: 150px;
 }
+.PrivateSwitchBase-input  
+{
+  margin-left: -100px;
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.txt
+{
+   font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.hover-effect {
+  transition: all 0.1s ease-in-out;
+}
+
+.hover-effect:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(5, 237, 164, 0.956);
+}
+ 

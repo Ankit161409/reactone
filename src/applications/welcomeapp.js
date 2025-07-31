@@ -4,16 +4,17 @@ import {Link } from "react-router-dom"
 import { MyappList } from "./Controls/AppControl"
 export function Welcomeapp()
 {
+    const back=''
     return(
 
-        <div className="container-fluid welcome" style={{
-    backgroundImage: "url('https://t3.ftcdn.net/jpg/02/70/35/00/360_F_270350073_WO6yQAdptEnAhYKM5GuA9035wbRnVJSr.jpg')",backgroundSize: "cover",    
+        <div className="container-fluid welcome" style={{ 
+    backgroundImage: "url('https://img.freepik.com/free-photo/laptop-notepad-composition-desk_23-2147982557.jpg?semt=ais_hybrid&w=740&q=80')",backgroundSize: "cover",    
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center", height:"100%"
+   height:"100%"
 }}> 
         <div className="row"> 
-        <div className="col-12 bg-info text-center text-light p-3 "> 
-           <h1>welcome to application</h1> 
+        <div className="col-12 bg-dark text-center text-light p-3 txt "> 
+           <h1>Welcome to application</h1> 
            <hr/>
         </div>
         </div>

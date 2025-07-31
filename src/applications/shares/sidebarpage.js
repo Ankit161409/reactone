@@ -22,6 +22,8 @@ function Sidebarpage() {
             <li><Link to="chart" className="link-dark rounded">Graph</Link></li>
             <li><Link to="props" className="link-dark rounded">props</Link></li>
             <li><Link to="lazypage" className="link-dark rounded">lazypage</Link></li>
+            <li><Link to="tailwind" className="link-dark rounded">tailwindPage</Link></li>
+            <li><Link to="mui" className="link-dark rounded">MUIpage</Link></li>
           </ul>
         </div>
       </li>

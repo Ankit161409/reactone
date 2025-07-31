@@ -90,8 +90,8 @@ function UserLoginpage() {
   const nav=useNavigate();
 
    const[login,loginupdate]=useState({
-    email:"abcd",
-    pass:"abcd"
+    email:" ",
+    pass:" "
    });
 
 const updatefield=(e)=>
@@ -110,13 +110,17 @@ if(login.email==="" || login.pass==="")
 {
   toast.warning("your email or password is blank",{position:"top-left",theme:"dark",autoClose:2000})
 }
-else
+if(login.email==="ankit@gmail.com" || login.pass==="ankit")
 {
   toast.success("congrats login success",{position:"top-left",theme:"dark",autoClose:2000})
-  setTimeout(()=>
+   setTimeout(()=>
   {
     nav("/dashboard");
   },2000)
+}
+else
+{
+   toast.warning("your email or password is invalid",{position:"top-left",theme:"dark",autoClose:2000})
 }
   }
   return (
