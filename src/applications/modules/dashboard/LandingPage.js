@@ -69,7 +69,7 @@ function LandingPage() {
           <div className="card bg-info">
             <div className="card-body text-light">
               <h5 className="card-title">total produc</h5>
-            <div style={{width:'100%', height:'300px;'}}>
+            <div style={{width:'100%', height:'300px'}}>
                <Reacharts />
               </div> 
             </div>

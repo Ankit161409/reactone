@@ -209,11 +209,11 @@ const handleFavoriteClick = (id) => {
 {/* code for card */}
 <Box sx={{ display: 'flex', overflowX: 'auto', gap: 3, padding: 4 }}>
  {images.map((d)=>(                    // images can import from appcontrol
-       <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
+       <Card  sx={{ maxWidth: 345 }}>
+      <CardHeader 
         avatar={
                 // <IconButton>
-            <Tooltip title={d.alt}>
+            <Tooltip key={d.url} title={d.alt}>
           <Avatar src={d.url} sx={{ bgcolor: red[500] }} aria-label="recipe">
            
           </Avatar>
